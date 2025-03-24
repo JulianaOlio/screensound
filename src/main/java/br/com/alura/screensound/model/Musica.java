@@ -15,6 +15,13 @@ public class Musica {
     @ManyToOne
     private Artista artista;
 
+    public Musica(String titulo) {
+        this.titulo = titulo;
+    }
+
+    public Musica() {
+    }
+
     public Long getId() {
         return id;
     }
@@ -43,7 +50,7 @@ public class Musica {
     public String toString() {
         return
                 "Música='" + titulo + '\'' +
-                        ", artista=" + artista;
+                        ", artista=" + artista.getNome();
     }
 }
 
